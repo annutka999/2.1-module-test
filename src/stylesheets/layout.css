@@ -1,0 +1,18 @@
+body {
+  background-color: aquamarine;
+}
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: 'PT Root UI', Arial, Arial, Helvetica, sans-serif;
+  font-size: 16rem;
+  background-color: aqua;
+}
+h1,
+h2 {
+  font-weight: 700;
+}
+h3 {
+  font-weight: 500;
+}
