@@ -1,18 +1,147 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>главная</title>
+    <title>Главная</title>
   </head>
-  <body>
-    <h1>главная</h1>
+  <body class="index">
+    <header class="header">
+      <a class="header__logo" href="#header">
+        <svg class="logo__icon" viewBox="0 0 200 200">
+          <g>
+            <ellipse cx="100" cy="52" rx="24" ry="46"></ellipse>
+            <ellipse
+              cx="100"
+              cy="52"
+              rx="24"
+              ry="46"
+              transform="rotate(72 100 100)"
+            ></ellipse>
+            <ellipse
+              cx="100"
+              cy="52"
+              rx="24"
+              ry="46"
+              transform="rotate(144 100 100)"
+            ></ellipse>
+            <ellipse
+              cx="100"
+              cy="52"
+              rx="24"
+              ry="46"
+              transform="rotate(216 100 100)"
+            ></ellipse>
+            <ellipse
+              cx="100"
+              cy="52"
+              rx="24"
+              ry="46"
+              transform="rotate(288 100 100)"
+            ></ellipse>
+          </g>
+        </svg>
+        <span class="logo__text">цветочный</span>
+      </a>
 
-    <h2>разделы</h2>
+      <nav class="header__nav">
+        <a href="#about" class="nav__link">О проекте</a>
+        <a href="#artciles" class="nav__link">Статьи</a>
+        <a href="#form" class="nav__link">Форма</a>
+      </nav>
+    </header>
+
+    <section class="hero section theme theme--light">
+      <p class="hero__eyebrow split split--words">
+        учебный проект / группа Б25ДЗ10
+      </p>
+
+      <h1 class="hero__title">
+        <span class="hero__line split--hover">цветоч</span>
+        <span class="hero__line">
+          <span class="split--hover">ный</span>
+          <span class="hero__flower">✿</span>
+        </span>
+      </h1>
+    </section>
+
+    <section class="form section theme theme--pink" id="form">
+      <div class="section__head">
+        <p class="reveal section__label">На связи</p>
+        <p class="reveal section__note">без спама, только письмо о запуске</p>
+      </div>
+
+      <div class="form__grid">
+        <div class="form__intro">
+          <h2 class="form__title">Оставайтесь на&nbsp;связи</h2>
+          <p class="form__text reveal">
+            Напишите нам — пришлём письмо, как только откроемся,
+            и&nbsp;поделимся первыми статьями раньше всех
+          </p>
+        </div>
+
+        <div class="form__wrapper reveal">
+          <form id="my-form">
+            <div class="form__field">
+              <input
+                class="form__input"
+                type="text"
+                id="message"
+                name="message"
+                data-fs-field
+                placeholder=""
+              />
+              <label class="form__label" for="message">Как вас зовут</label>
+              <span data-fs-error="message"></span>
+            </div>
+
+            <div class="form__field">
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder=""
+                data-fs-field
+              />
+              <label class="form__label" for="email">Email</label>
+              <span data-fs-error="email"></span>
+            </div>
+
+            <button
+              class="form__button button"
+              type="submit"
+              data-fs-submit-btn
+            >
+              Отправить <span>✿</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Place these scripts at the end of the body tag -->
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree('initForm', {
+        formElement: '#my-form',
+        formId: 'xkjgepnj'
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+    <!-- шпаргалка по навигации -->
+    <!-- <h1>Главная</h1>
+
+    <h2>Разделы</h2>
     <ul>
-      <li><a href="pages/articles.html">статьи</a></li>
-      <li><a href="pages/dictionary.html">словарь</a></li>
-      <li><a href="pages/tests.html">тесты</a></li>
-    </ul>
+      <li><a href="pages/articles.html">Статьи</a></li>
+      <li><a href="pages/dictionary.html">Словарь</a></li>
+      <li><a href="pages/tests.html">Тесты</a></li>
+    </ul> -->
   </body>
 </html>
